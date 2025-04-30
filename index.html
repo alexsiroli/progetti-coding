@@ -8,7 +8,6 @@
     /* Reset base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      /* Font Comic Sans */
       font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       background: #FFFAE5;
       color: #333;
@@ -57,8 +56,11 @@
       box-shadow: 0 4px 8px var(--col-shadow);
       transition: transform 0.2s;
     }
-    .project:hover {
-      transform: translateY(-5px);
+    /* Hover solo su dispositivi con pointer e hover */
+    @media (hover: hover) and (pointer: fine) {
+      .project:hover {
+        transform: translateY(-5px);
+      }
     }
     .project h2 {
       font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
@@ -73,6 +75,7 @@
       position: relative;
       width: 100%;
       padding-top: 81.25%; /* aspect ratio 480x390 */
+      touch-action: pan-y;
     }
     .iframe-container iframe {
       position: absolute;
@@ -82,6 +85,7 @@
       height: 100%;
       border: none;
       border-radius: 0 0 12px 12px;
+      touch-action: pan-y;
     }
   </style>
 </head>
