@@ -8,32 +8,37 @@
     /* Reset base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      /* Font Comic Sans con fallback Arial e generico sans-serif */
-      font-family: 'Comic Sans MS', Arial, sans-serif;
-      font-style: normal !important; /* Forza non corsivo */
+      /* Font Comic Sans */
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       background: #FFFAE5;
       color: #333;
       display: flex;
       justify-content: center;
       padding: 10px;
-      -webkit-text-size-adjust: 100%; /* Evita ingrandimenti strani su iOS */
+    }
+    :root {
+      --col-card-bg: #FFF;
+      --col-header-bg: #FFA07A;
+      --col-title-bg: #87CEEB;
+      --col-title-text: #fff;
+      --col-shadow: rgba(0,0,0,0.1);
+      --col-border: #F08080;
     }
     .container {
       width: 100%;
       max-width: 500px;
     }
     header {
-      background: #FFA07A;
+      background: var(--col-header-bg);
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px var(--col-shadow);
       border-radius: 12px;
       margin-bottom: 15px;
     }
     header h1,
     header p {
-      font-family: 'Comic Sans MS', Arial, sans-serif;
-      font-style: normal !important;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
@@ -45,26 +50,24 @@
       gap: 20px;
     }
     .project {
-      background: #FFF;
-      border: 3px dashed #F08080;
+      background: var(--col-card-bg);
+      border: 3px dashed var(--col-border);
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px var(--col-shadow);
       transition: transform 0.2s;
     }
-    /* Hover solo su dispositivi con mouse */
-    @media (hover: hover) and (pointer: fine) {
-      .project:hover { transform: translateY(-5px); }
+    .project:hover {
+      transform: translateY(-5px);
     }
     .project h2 {
-      font-family: 'Comic Sans MS', Arial, sans-serif;
-      font-style: normal !important;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       font-size: 1.1rem;
       padding: 12px;
       text-align: center;
-      background: #87CEEB;
-      color: #fff;
-      border-bottom: 2px solid #F08080;
+      background: var(--col-title-bg);
+      color: var(--col-title-text);
+      border-bottom: 2px solid var(--col-border);
     }
     .iframe-container {
       position: relative;
@@ -73,8 +76,10 @@
     }
     .iframe-container iframe {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
       border-radius: 0 0 12px 12px;
     }
