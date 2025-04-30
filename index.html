@@ -8,7 +8,8 @@
     /* Reset base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      /* Font Comic Sans */
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       background: #FFFAE5;
       color: #333;
       display: flex;
@@ -35,15 +36,14 @@
       border-radius: 12px;
       margin-bottom: 15px;
     }
-    header h1 {
-      font-size: 1.8rem;
+    header h1,
+    header p {
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       color: #fff;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
-    header p {
-      font-size: 1rem;
-      color: #fff;
-    }
+    header h1 { font-size: 1.8rem; }
+    header p { font-size: 1rem; }
     main {
       display: flex;
       flex-direction: column;
@@ -61,6 +61,7 @@
       transform: translateY(-5px);
     }
     .project h2 {
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
       font-size: 1.1rem;
       padding: 12px;
       text-align: center;
@@ -82,7 +83,6 @@
       border: none;
       border-radius: 0 0 12px 12px;
     }
-    /* Fullscreen in landscape rimosso */
   </style>
 </head>
 <body>
