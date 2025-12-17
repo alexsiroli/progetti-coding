@@ -1,254 +1,456 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetti Coding 4B & 5B - Monte Castello</title>
+  <title>Progetti Coding - Scuola Primaria Saffi - Cesena</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <style>
-    *, ::before, ::after {
+    *,
+    ::before,
+    ::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    html, body { height: 100%; }
+
+    html,
     body {
-      font-family: 'Comic Sans MS', Arial, sans-serif;
-      background: #FFFAE5;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #0f3e26 0%, #8a1c1f 100%);
       color: #333;
-      padding: 10px;
-      min-height: 100vh;
-    }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    header {
-      background: #FFA07A;
       padding: 20px;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      margin-bottom: 40px;
+      border: 4px solid #d4af37;
+      /* Gold border */
+      position: relative;
+      overflow: hidden;
     }
-    header h1, header p {
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+    header::before,
+    header::after {
+      content: '🎄';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
     }
-    header h1 { font-size: 1.8rem; }
-    header p  { font-size: 1rem; }
+
+    header::before {
+      left: 30px;
+    }
+
+    header::after {
+      right: 30px;
+    }
+
+    header h1 {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 3.5rem;
+      color: #8a1c1f;
+      /* Christmas Red */
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #0f3e26;
+      /* Christmas Green */
+      font-weight: 600;
+    }
+
     main {
       display: grid;
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding-bottom: 40px;
     }
+
     .project {
       background: #FFF;
-      border: 3px dashed #F08080;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform .2s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 2px solid #d4af37;
+      display: flex;
+      flex-direction: column;
     }
+
     @media (hover: hover) and (pointer: fine) {
-      .project:hover { transform: translateY(-5px); }
+      .project:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        border-color: #fff;
+        z-index: 10;
+      }
     }
+
     .project h2 {
-      background: #87CEEB;
+      background: #0f3e26;
       color: #fff;
-      padding: 12px;
+      padding: 15px;
       text-align: center;
-      font-size: 1.1rem;
-      border-bottom: 2px solid #F08080;
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 1.8rem;
+      border-bottom: 4px solid #d4af37;
+      letter-spacing: 1px;
     }
+
     .iframe-container {
       width: 100%;
       aspect-ratio: 480 / 390;
+      background: #f0f0f0;
+      position: relative;
     }
+
     .iframe-container iframe {
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: 0 0 12px 12px;
+    }
+
+    /* Snow effect overlay just for fun/premium feel */
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.5"/><circle cx="30" cy="40" r="1.5" fill="white" opacity="0.4"/><circle cx="60" cy="20" r="1" fill="white" opacity="0.6"/><circle cx="80" cy="60" r="1.2" fill="white" opacity="0.5"/></svg>');
+      animation: snow 20s linear infinite;
+    }
+
+    @keyframes snow {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 100px 100px;
+      }
     }
   </style>
 </head>
+
 <body>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetti Coding - Scuola Primaria Saffi - Cesena</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    ::before,
+    ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #0f3e26 0%, #8a1c1f 100%);
+      color: #333;
+      padding: 20px;
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      margin-bottom: 40px;
+      border: 4px solid #d4af37;
+      /* Gold border */
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before,
+    header::after {
+      content: '🎄';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+    }
+
+    header::before {
+      left: 30px;
+    }
+
+    header::after {
+      right: 30px;
+    }
+
+    header h1 {
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 3.5rem;
+      color: #8a1c1f;
+      /* Christmas Red */
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #0f3e26;
+      /* Christmas Green */
+      font-weight: 600;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+
+    .project {
+      background: #FFF;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 2px solid #d4af37;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .project:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        border-color: #fff;
+        z-index: 10;
+      }
+    }
+
+    .project h2 {
+      background: #0f3e26;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-family: 'Mountains of Christmas', cursive;
+      font-size: 1.8rem;
+      border-bottom: 4px solid #d4af37;
+      letter-spacing: 1px;
+    }
+
+    .iframe-container {
+      width: 100%;
+      aspect-ratio: 480 / 390;
+      background: #f0f0f0;
+      position: relative;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Snow effect overlay just for fun/premium feel */
+    .snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.5"/><circle cx="30" cy="40" r="1.5" fill="white" opacity="0.4"/><circle cx="60" cy="20" r="1" fill="white" opacity="0.6"/><circle cx="80" cy="60" r="1.2" fill="white" opacity="0.5"/></svg>');
+      animation: snow 20s linear infinite;
+    }
+
+    @keyframes snow {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 100px 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="snow"></div>
   <div class="container">
     <header>
-      <h1>Progetti Coding 4B & 5B</h1>
-      <p>Prof. Alex Siroli - Monte Castello</p>
+      <h1>Progetti Coding</h1>
+      <p>Prof. Alex Siroli - Scuola Primaria Saffi - Cesena</p>
     </header>
     <main>
       <div class="project">
-        <h2>Abkari & Gori</h2>
+        <h2>Alberto e Alessander</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Abkari%20Gori&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Alberto%20Alessander%20&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Abkari Gori Snap! Project">
+            title="Alberto e Alessander Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Bertozzi & Ogbonna</h2>
+        <h2>Ayoub e Klendo</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Bertozzi%20Ogbonna&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=ayoub%20Klendo&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Bertozzi Ogbonna Snap! Project">
+            title="Ayoub e Klendo Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Briganti & Qasmoui</h2>
+        <h2>Beatrice e Danna</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Briganti%20Qasmoui&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Beatrice%20e%20Danna&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Briganti Qasmoui Snap! Project">
+            title="Beatrice e Danna Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Docci & Ianneo</h2>
+        <h2>Bianca, Gea e Maksym</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Docci%20Ianneo&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Bianca%2cGea%2c%20maksym&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Docci Ianneo Snap! Project">
+            title="Bianca, Gea e Maksym Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Donati & Mazzoni</h2>
+        <h2>Diego e Ettore</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Donati%20Mazzoni&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Castello%20di%20Diego%20Tersi%20e%20Ettore%20Cavallini&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Donati Mazzoni Snap! Project">
+            title="Diego e Ettore Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>El-ouadi & Pagliarani</h2>
+        <h2>Diego e Nicola</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=El-ouadi%20Pagliarani&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Diego%20Nicola&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="El-ouadi Pagliarani Snap! Project">
+            title="Diego e Nicola Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Franzo & Ravegnini</h2>
+        <h2>Filippo e Carlo</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Franzo%20ravegnini&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=filippovitale%20carlopigliacelli&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Franzo Ravegnini Snap! Project">
+            title="Filippo e Carlo Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Loure & Gouba</h2>
+        <h2>Marco e Domenico</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Loure%20Gouba&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=marco%20e%20domenico&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Loure Gouba Snap! Project">
+            title="Marco e Domenico Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Marino & Singh</h2>
+        <h2>Marta e Anna</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Marino%20Singh&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Marta%20Abbondanza%20Anna%20Viroli&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Marino Singh Snap! Project">
+            title="Marta e Anna Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Munteanu & Rigoni</h2>
+        <h2>Silvia e Dora</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Munteanu%20Rigoni&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=silvia%20e%20dora&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Munteanu Rigoni Snap! Project">
+            title="Silvia e Dora Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Paolo</h2>
+        <h2>Teodora e Yossra</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Paolo&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=Teodora%2cYossra&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Paolo Snap! Project">
+            title="Teodora e Yossra Snap! Project">
           </iframe>
         </div>
       </div>
       <div class="project">
-        <h2>Petrini & Succi</h2>
+        <h2>Maestro Alex</h2>
         <div class="iframe-container">
           <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Petrini%20Succi&username=icalex"
+            src="https://snap.berkeley.edu/embed?projectname=indovinelli%20al%20mare&username=saffi2526&pauseButton=true"
             allow="clipboard-read; clipboard-write; fullscreen"
-            title="Petrini Succi Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Riceputi & Bucci</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Riceputi%20Bucci&username=icalex"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Riceputi Bucci Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Rossi & Ndiaye</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Rossi%20Ndiaye&username=icalex"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Rossi Ndiaye Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Tesei & Marchetti</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Tesei%20Marchetti&username=icalex"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Tesei Marchetti Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Yabre & Brogna</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Yabre%20Brogna&username=icalex"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Yabre Brogna Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Zanze & Ruffilli</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Zanze%20Ruffilli&username=icalex"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Zanze Ruffilli Snap! Project">
+            title="Maestro Alex Snap! Project">
           </iframe>
         </div>
       </div>
     </main>
   </div>
 </body>
+
 </html>
