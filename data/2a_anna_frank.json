@@ -1,87 +1,15 @@
 [
     {
-        "student": "Lorenzo Masini e Vincenzo Borruso",
+        "student": "Agata e Giulia",
         "projects": [
             {
                 "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Lorenzo%20masini%2cVincenzo%20borruso&username=frank_2a_2026&showTitle=true"
+                "url": "https://snap.berkeley.edu/embed?projectname=Agata%20Orioli%20e%20Giulia%20Cangini&username=frank_2a_2026&showTitle=true"
             }
         ]
     },
     {
-        "student": "Linda Babbi e Victoria Venturi",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Linda%20Babbi%20e%20Victoria%20Venturi&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Giulia Gregori e Ylenia Imparato",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Giulia%20Gregori%20Ylenia%20Imparato&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Giorgia Sanulli e Sofia Brighi",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Giorgia%20Sanulli%20e%20Sofia%20Brighi&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Francesco Zoffoli e Enrico Severi",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Francesco%20Zoffoli%20e%20Enrico%20Severi&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Fabio Xheli e Francesco Lucchi",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Fabio%20Xheli%20e%20Francesco%20Lucchi%20&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Ettore Baldazzi e Mattia Minotti",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Ettore%20Baldazzi%2cMattia%20Minotti&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Diego Orticelli e Lorenzo Benini",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Diego%20orticelli%2cLorenzo%20Benini&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Cristian Lucchi e Matteo Salemi",
-        "projects": [
-            {
-                "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=cristian%20lucchi%20matteo%20salemi&username=frank_2a_2026&showTitle=true"
-            }
-        ]
-    },
-    {
-        "student": "Ahmed Hannachi e Buga Christian",
+        "student": "Ahmed e Christian",
         "projects": [
             {
                 "name": "Progetto Snap!",
@@ -90,11 +18,83 @@
         ]
     },
     {
-        "student": "Agata Orioli e Giulia Cangini",
+        "student": "Cristian e Matteo",
         "projects": [
             {
                 "name": "Progetto Snap!",
-                "url": "https://snap.berkeley.edu/embed?projectname=Agata%20Orioli%20e%20Giulia%20Cangini&username=frank_2a_2026&showTitle=true"
+                "url": "https://snap.berkeley.edu/embed?projectname=cristian%20lucchi%20matteo%20salemi&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Diego e Lorenzo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Diego%20orticelli%2cLorenzo%20Benini&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Ettore e Mattia",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Ettore%20Baldazzi%2cMattia%20Minotti&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Fabio e Francesco",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Fabio%20Xheli%20e%20Francesco%20Lucchi%20&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Francesco e Enrico",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Francesco%20Zoffoli%20e%20Enrico%20Severi&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Giorgia e Sofia",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Giorgia%20Sanulli%20e%20Sofia%20Brighi&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Giulia e Ylenia",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Giulia%20Gregori%20Ylenia%20Imparato&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Linda e Victoria",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Linda%20Babbi%20e%20Victoria%20Venturi&username=frank_2a_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Lorenzo e Vincenzo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Lorenzo%20masini%2cVincenzo%20borruso&username=frank_2a_2026&showTitle=true"
             }
         ]
     }
