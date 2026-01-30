@@ -180,6 +180,23 @@
       border: 2px dashed #ccc;
     }
 
+    .iframe-container {
+      width: 100%;
+      aspect-ratio: 580 / 560;
+      background: #f0f0f0;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border: 2px solid var(--secondary-color);
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* Decorations */
     .decoration {
       position: fixed;
@@ -238,88 +255,6 @@
   </div>
 
   <script>
-    // Data embedded directly to avoid CORS issues when opening from file://
-    const classesData = {
-      "5_saffi": [
-        {
-          "student": "Alberto e Alessander",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Alberto%20Alessander%20&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Ayoub e Klendo",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=ayoub%20Klendo&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Beatrice e Danna",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Beatrice%20e%20Danna&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Bianca, Gea e Maksym",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Bianca%2cGea%2c%20maksym&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Diego e Ettore",
-          "projects": [
-            { "name": "Castello", "url": "https://snap.berkeley.edu/embed?projectname=Castello%20di%20Diego%20Tersi%20e%20Ettore%20Cavallini&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Diego e Nicola",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Diego%20Nicola&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Filippo e Carlo",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=filippovitale%20carlopigliacelli&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Marco e Domenico",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=marco%20e%20domenico&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Marta e Anna",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Marta%20Abbondanza%20Anna%20Viroli&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Silvia e Dora",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=silvia%20e%20dora&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Teodora e Yossra",
-          "projects": [
-            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Teodora%2cYossra&username=saffi2526&pauseButton=true" }
-          ]
-        },
-        {
-          "student": "Maestro Alex",
-          "projects": [
-            { "name": "Indovinelli al mare", "url": "https://snap.berkeley.edu/embed?projectname=indovinelli%20al%20mare&username=saffi2526&pauseButton=true" }
-          ]
-        }
-      ],
-      "2a_anna_frank": [],
-      "2o_plauto": [],
-      "2a_ronta": [],
-      "5a_vigne": []
-    };
-
     const classes = [
       { name: "2A Anna Frank", id: "2a_anna_frank" },
       { name: "2A Ronta", id: "2a_ronta" },
@@ -340,14 +275,23 @@
       classSelector.appendChild(btn);
     });
 
-    function loadProjects(classId, clickedBtn) {
+    async function loadProjects(classId, clickedBtn) {
       // Update UI for active button
       document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
       clickedBtn.classList.add('active');
 
-      // Get data from local object
-      const data = classesData[classId];
-      renderProjects(data);
+      // Show loading
+      projectsArea.innerHTML = '<div class="empty-state">Caricamento...</div>';
+
+      try {
+        const response = await fetch(`data/${classId}.json`);
+        if (!response.ok) throw new Error('File not found');
+        const data = await response.json();
+        renderProjects(data);
+      } catch (error) {
+        console.error(error);
+        projectsArea.innerHTML = '<div class="empty-state">Nessun progetto trovato o errore di caricamento (assicurati di usare un server web).</div>';
+      }
     }
 
     function renderProjects(data) {
@@ -379,7 +323,14 @@
       div.innerHTML = `
                 <div class="student-name">${studentName}</div>
                 <div class="project-title">${projectName}</div>
-                <a href="${projectUrl}" target="_blank" class="project-link">Vai al Progetto 🚀</a>
+                <div class="iframe-container">
+                    <iframe 
+                        src="${projectUrl}" 
+                        allow="clipboard-read; clipboard-write; fullscreen" 
+                        title="${projectName}">
+                    </iframe>
+                </div>
+                <a href="${projectUrl}" target="_blank" class="project-link">Apri a tutto schermo 🚀</a>
             `;
       return div;
     }
