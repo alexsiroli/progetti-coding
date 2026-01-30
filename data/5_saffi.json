@@ -1,0 +1,110 @@
+[
+    {
+        "student": "Alberto e Alessander",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Alberto%20Alessander%20&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Ayoub e Klendo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=ayoub%20Klendo&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Beatrice e Danna",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Beatrice%20e%20Danna&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Bianca, Gea e Maksym",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Bianca%2cGea%2c%20maksym&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Diego e Ettore",
+        "projects": [
+            {
+                "name": "Castello",
+                "url": "https://snap.berkeley.edu/embed?projectname=Castello%20di%20Diego%20Tersi%20e%20Ettore%20Cavallini&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Diego e Nicola",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Diego%20Nicola&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Filippo e Carlo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=filippovitale%20carlopigliacelli&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Marco e Domenico",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=marco%20e%20domenico&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Marta e Anna",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Marta%20Abbondanza%20Anna%20Viroli&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Silvia e Dora",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=silvia%20e%20dora&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Teodora e Yossra",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Teodora%2cYossra&username=saffi2526&pauseButton=true"
+            }
+        ]
+    },
+    {
+        "student": "Maestro Alex",
+        "projects": [
+            {
+                "name": "Indovinelli al mare",
+                "url": "https://snap.berkeley.edu/embed?projectname=indovinelli%20al%20mare&username=saffi2526&pauseButton=true"
+            }
+        ]
+    }
+]

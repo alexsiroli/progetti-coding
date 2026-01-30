@@ -4,453 +4,386 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetti Coding - Scuola Primaria Saffi - Cesena</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
+  <title>Progetti Coding</title>
   <style>
-    *,
-    ::before,
-    ::after {
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --accent-color: #FFE66D;
+      --text-color: #2C3E50;
+      --bg-color: #F7F9FC;
+      --card-bg: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-color: var(--bg-color);
+      background-image: radial-gradient(var(--secondary-color) 2px, transparent 2px);
+      background-size: 30px 30px;
+      color: var(--text-color);
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #0f3e26 0%, #8a1c1f 100%);
-      color: #333;
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       min-height: 100vh;
-      background-attachment: fixed;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 15px;
     }
 
     header {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
+      background-color: var(--primary-color);
+      width: 100%;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
       text-align: center;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      margin-bottom: 40px;
-      border: 4px solid #d4af37;
-      /* Gold border */
+      margin-bottom: 2rem;
       position: relative;
       overflow: hidden;
-    }
-
-    header::before,
-    header::after {
-      content: '🎄';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 3rem;
     }
 
     header::before {
-      left: 30px;
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 50%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: rotate(30deg);
     }
 
-    header::after {
-      right: 30px;
-    }
-
-    header h1 {
-      font-family: 'Mountains of Christmas', cursive;
-      font-size: 3.5rem;
-      color: #8a1c1f;
-      /* Christmas Red */
-      margin-bottom: 10px;
+    h1 {
+      color: white;
+      font-size: 3rem;
+      margin: 0;
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #0f3e26;
-      /* Christmas Green */
-      font-weight: 600;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
-      padding-bottom: 40px;
-    }
-
-    .project {
-      background: #FFF;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      border: 2px solid #d4af37;
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .project:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        border-color: #fff;
-        z-index: 10;
-      }
-    }
-
-    .project h2 {
-      background: #0f3e26;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-family: 'Mountains of Christmas', cursive;
-      font-size: 1.8rem;
-      border-bottom: 4px solid #d4af37;
       letter-spacing: 1px;
     }
 
-    .iframe-container {
-      width: 100%;
-      aspect-ratio: 480 / 390;
-      background: #f0f0f0;
-      position: relative;
+    header h2 {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      font-weight: 400;
     }
 
-    .iframe-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .container {
+      max-width: 1200px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 3rem;
     }
 
-    /* Snow effect overlay just for fun/premium feel */
-    .snow {
+    .class-selector {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .class-btn {
+      background-color: var(--card-bg);
+      border: 3px solid var(--secondary-color);
+      color: var(--text-color);
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .class-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(78, 205, 196, 0.3);
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .class-btn.active {
+      background-color: var(--secondary-color);
+      color: white;
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(1px);
+    }
+
+    .projects-area {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 5px solid var(--accent-color);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) rotate(1deg);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .student-name {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: auto;
+      text-decoration: none;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      padding: 0.8rem 1.2rem;
+      border-radius: 15px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .project-link:hover {
+      background-color: #ffd633;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      padding: 3rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      border: 2px dashed #ccc;
+    }
+
+    /* Decorations */
+    .decoration {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.5"/><circle cx="30" cy="40" r="1.5" fill="white" opacity="0.4"/><circle cx="60" cy="20" r="1" fill="white" opacity="0.6"/><circle cx="80" cy="60" r="1.2" fill="white" opacity="0.5"/></svg>');
-      animation: snow 20s linear infinite;
+      z-index: -1;
+      opacity: 0.5;
     }
 
-    @keyframes snow {
-      0% {
-        background-position: 0 0;
-      }
+    .dec-1 {
+      top: 10%;
+      left: 5%;
+      width: 100px;
+      height: 100px;
+      background: #FFD93D;
+      border-radius: 50%;
+    }
 
-      100% {
-        background-position: 100px 100px;
-      }
+    .dec-2 {
+      bottom: 10%;
+      right: 5%;
+      width: 150px;
+      height: 150px;
+      background: #6BCB77;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .dec-3 {
+      bottom: 20%;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      background: #4D96FF;
+      transform: rotate(45deg);
     }
   </style>
 </head>
 
 <body>
-<!DOCTYPE html>
-<html lang="it">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetti Coding - Scuola Primaria Saffi - Cesena</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
-  <style>
-    *,
-    ::before,
-    ::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <div class="decoration dec-1"></div>
+  <div class="decoration dec-2"></div>
+  <div class="decoration dec-3"></div>
 
-    html,
-    body {
-      height: 100%;
-    }
+  <header>
+    <h1>Progetti Coding 2025/2026</h1>
+    <h2>Prof. Alex Siroli</h2>
+  </header>
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #0f3e26 0%, #8a1c1f 100%);
-      color: #333;
-      padding: 20px;
-      min-height: 100vh;
-      background-attachment: fixed;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      text-align: center;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      margin-bottom: 40px;
-      border: 4px solid #d4af37;
-      /* Gold border */
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before,
-    header::after {
-      content: '🎄';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 3rem;
-    }
-
-    header::before {
-      left: 30px;
-    }
-
-    header::after {
-      right: 30px;
-    }
-
-    header h1 {
-      font-family: 'Mountains of Christmas', cursive;
-      font-size: 3.5rem;
-      color: #8a1c1f;
-      /* Christmas Red */
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #0f3e26;
-      /* Christmas Green */
-      font-weight: 600;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
-      padding-bottom: 40px;
-    }
-
-    .project {
-      background: #FFF;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      border: 2px solid #d4af37;
-      display: flex;
-      flex-direction: column;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .project:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        border-color: #fff;
-        z-index: 10;
-      }
-    }
-
-    .project h2 {
-      background: #0f3e26;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-family: 'Mountains of Christmas', cursive;
-      font-size: 1.8rem;
-      border-bottom: 4px solid #d4af37;
-      letter-spacing: 1px;
-    }
-
-    .iframe-container {
-      width: 100%;
-      aspect-ratio: 480 / 390;
-      background: #f0f0f0;
-      position: relative;
-    }
-
-    .iframe-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Snow effect overlay just for fun/premium feel */
-    .snow {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.5"/><circle cx="30" cy="40" r="1.5" fill="white" opacity="0.4"/><circle cx="60" cy="20" r="1" fill="white" opacity="0.6"/><circle cx="80" cy="60" r="1.2" fill="white" opacity="0.5"/></svg>');
-      animation: snow 20s linear infinite;
-    }
-
-    @keyframes snow {
-      0% {
-        background-position: 0 0;
-      }
-
-      100% {
-        background-position: 100px 100px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="snow"></div>
   <div class="container">
-    <header>
-      <h1>Progetti Coding</h1>
-      <p>Prof. Alex Siroli - Scuola Primaria Saffi - Cesena</p>
-    </header>
-    <main>
-      <div class="project">
-        <h2>Alberto e Alessander</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Alberto%20Alessander%20&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Alberto e Alessander Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Ayoub e Klendo</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=ayoub%20Klendo&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Ayoub e Klendo Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Beatrice e Danna</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Beatrice%20e%20Danna&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Beatrice e Danna Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Bianca, Gea e Maksym</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Bianca%2cGea%2c%20maksym&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Bianca, Gea e Maksym Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Diego e Ettore</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Castello%20di%20Diego%20Tersi%20e%20Ettore%20Cavallini&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Diego e Ettore Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Diego e Nicola</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Diego%20Nicola&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Diego e Nicola Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Filippo e Carlo</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=filippovitale%20carlopigliacelli&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Filippo e Carlo Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Marco e Domenico</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=marco%20e%20domenico&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Marco e Domenico Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Marta e Anna</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Marta%20Abbondanza%20Anna%20Viroli&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Marta e Anna Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Silvia e Dora</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=silvia%20e%20dora&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Silvia e Dora Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Teodora e Yossra</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=Teodora%2cYossra&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Teodora e Yossra Snap! Project">
-          </iframe>
-        </div>
-      </div>
-      <div class="project">
-        <h2>Maestro Alex</h2>
-        <div class="iframe-container">
-          <iframe
-            src="https://snap.berkeley.edu/embed?projectname=indovinelli%20al%20mare&username=saffi2526&pauseButton=true"
-            allow="clipboard-read; clipboard-write; fullscreen"
-            title="Maestro Alex Snap! Project">
-          </iframe>
-        </div>
-      </div>
-    </main>
+    <div class="class-selector" id="classSelector">
+      <!-- Buttons will be generated by JS -->
+    </div>
+
+    <div class="projects-area" id="projectsArea">
+      <div class="empty-state">Seleziona una classe per vedere i progetti!</div>
+    </div>
   </div>
+
+  <script>
+    // Data embedded directly to avoid CORS issues when opening from file://
+    const classesData = {
+      "5_saffi": [
+        {
+          "student": "Alberto e Alessander",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Alberto%20Alessander%20&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Ayoub e Klendo",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=ayoub%20Klendo&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Beatrice e Danna",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Beatrice%20e%20Danna&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Bianca, Gea e Maksym",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Bianca%2cGea%2c%20maksym&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Diego e Ettore",
+          "projects": [
+            { "name": "Castello", "url": "https://snap.berkeley.edu/embed?projectname=Castello%20di%20Diego%20Tersi%20e%20Ettore%20Cavallini&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Diego e Nicola",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Diego%20Nicola&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Filippo e Carlo",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=filippovitale%20carlopigliacelli&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Marco e Domenico",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=marco%20e%20domenico&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Marta e Anna",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Marta%20Abbondanza%20Anna%20Viroli&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Silvia e Dora",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=silvia%20e%20dora&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Teodora e Yossra",
+          "projects": [
+            { "name": "Progetto Snap!", "url": "https://snap.berkeley.edu/embed?projectname=Teodora%2cYossra&username=saffi2526&pauseButton=true" }
+          ]
+        },
+        {
+          "student": "Maestro Alex",
+          "projects": [
+            { "name": "Indovinelli al mare", "url": "https://snap.berkeley.edu/embed?projectname=indovinelli%20al%20mare&username=saffi2526&pauseButton=true" }
+          ]
+        }
+      ],
+      "2a_anna_frank": [],
+      "2o_plauto": [],
+      "2a_ronta": [],
+      "5a_vigne": []
+    };
+
+    const classes = [
+      { name: "2A Anna Frank", id: "2a_anna_frank" },
+      { name: "2A Ronta", id: "2a_ronta" },
+      { name: "2O Plauto", id: "2o_plauto" },
+      { name: "5 Saffi", id: "5_saffi" },
+      { name: "5A Vigne", id: "5a_vigne" }
+    ];
+
+    const classSelector = document.getElementById('classSelector');
+    const projectsArea = document.getElementById('projectsArea');
+
+    // Initialize buttons
+    classes.forEach(cls => {
+      const btn = document.createElement('button');
+      btn.className = 'class-btn';
+      btn.textContent = cls.name;
+      btn.onclick = () => loadProjects(cls.id, btn);
+      classSelector.appendChild(btn);
+    });
+
+    function loadProjects(classId, clickedBtn) {
+      // Update UI for active button
+      document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
+      clickedBtn.classList.add('active');
+
+      // Get data from local object
+      const data = classesData[classId];
+      renderProjects(data);
+    }
+
+    function renderProjects(data) {
+      projectsArea.innerHTML = '';
+
+      if (!data || data.length === 0) {
+        projectsArea.innerHTML = '<div class="empty-state">Ancora nessun progetto inserito per questa classe!</div>';
+        return;
+      }
+
+      data.forEach(entry => {
+        // If entry has a list of projects under one student/group name
+        if (entry.projects && Array.isArray(entry.projects)) {
+          entry.projects.forEach(proj => {
+            const card = createProjectCard(entry.student, proj.name, proj.url);
+            projectsArea.appendChild(card);
+          });
+        } else if (entry.name && entry.url) {
+          // Direct project entry or flat structure
+          const card = createProjectCard(entry.student || "Studente", entry.name, entry.url);
+          projectsArea.appendChild(card);
+        }
+      });
+    }
+
+    function createProjectCard(studentName, projectName, projectUrl) {
+      const div = document.createElement('div');
+      div.className = 'project-card';
+      div.innerHTML = `
+                <div class="student-name">${studentName}</div>
+                <div class="project-title">${projectName}</div>
+                <a href="${projectUrl}" target="_blank" class="project-link">Vai al Progetto 🚀</a>
+            `;
+      return div;
+    }
+  </script>
 </body>
 
 </html>
