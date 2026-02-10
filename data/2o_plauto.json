@@ -1,1 +1,105 @@
-[]
+[
+    {
+        "student": "Alam e Wafa",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Alam%20wafa%20bin&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Bayezidul, Samuele e Dorian",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Bayezidul%20Islam%2cSamuele%20Gunchi%2cDorian%20Mattei&username=frank_2o_2026&showTitle=true"
+            },
+            {
+                "name": "Progetto Snap! (2)",
+                "url": "https://snap.berkeley.edu/embed?projectname=Bayezidul%20Islam%2c%20Samuele%20Giunchi%2c%20Dorian%20Mattei%20%282%29&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Costanza e Martina",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Costanza%20linares%20e%20martina%20sama&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Francesco e Cristian",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Francesco%20bisacchi%20Cristian%20Ele&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Giada e Darios",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Giada%20Boschi%20e%20Darios%20Kaja&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Maty e Linda",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=MATY%20SARR%20LINDA%20WU&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Nicolas e Naifah",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Nicolas%20Gasparini%20e%20Naifah%20Uddin&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Pietro e Mezba",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=pietro%20ceccarelli%20e%20mezba%20uddin&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Raouf",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Raouf%20Guiebre&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Raouf e Mofdi",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Raouf%20Guiebre%20e%20Mofdi%20Boubaker&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Viola e Tanisha",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Viola%20Sintini%20e%20Turin%20Tanisha%20Ullah&username=frank_2o_2026&showTitle=true"
+            }
+        ]
+    }
+]
