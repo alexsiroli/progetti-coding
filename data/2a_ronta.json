@@ -1,1 +1,74 @@
-[]
+[
+    {
+        "student": "Aiman e Anita",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Aiman%20%20Anita&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Bianca e Francesco",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Bianca%20e%20Francesco&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Carlotta e Beatrice",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Carlotta%20Beatrice&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Diego e Nisren",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Diego%20e%20Nisren&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Kevin e Virginia",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Kevin%20Virginia&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Mia e Gabriele",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=mia%20%20e%20%20gabriele&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Vera e Marco",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=vera%20marco&username=ronta2a&showTitle=true"
+            }
+        ]
+    },
+    {
+        "student": "Maestri",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Base&username=ronta2a&showTitle=true"
+            }
+        ]
+    }
+]
