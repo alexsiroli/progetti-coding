@@ -1,0 +1,101 @@
+[
+    {
+        "student": "Anna e Filippo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Anna%20Filippo&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Ayoub e Teodora",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Ayoub%20Safa%20%2c%20Teodora%20Sas%20&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Maestro Alex",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Base&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Bianca e Alberto",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Bianca%20Alberto&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Diego T. e Silvia",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Diego%20T%2e%20e%20Silvia&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Domenico, Danna e Carlo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Domenico%2dDanna%2dCarlo%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21%21&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Dora e Ettore",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=DORA%20ETTORE&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Marco e Alessander",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Marco%20e%20Alessander&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Marta e Gea",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Marta%20e%20Gea&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Nicola e Beatrice",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Nico%20e%20Bea&username=saffi2&"
+            }
+        ]
+    },
+    {
+        "student": "Yossra e Klendo",
+        "projects": [
+            {
+                "name": "Progetto Snap!",
+                "url": "https://snap.berkeley.edu/embed?projectname=Yossra%20e%20Klendo&username=saffi2&"
+            }
+        ]
+    }
+]
