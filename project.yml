@@ -1,0 +1,43 @@
+# project.yml — manifest del progetto
+# Generato il 2026-09-12 dal censimento. Stato e tier dedotti: verificali.
+
+# --- identità ---------------------------------------------------------------
+nome: progetti-coding
+descrizione: 
+repo: alexsiroli/progetti-coding
+
+# --- metodo -----------------------------------------------------------------
+tier: lite
+stato: attivo
+
+avviato: 2025-04-30
+ultimo_review: 2026-09-12
+
+# --- tecnologia -------------------------------------------------------------
+stack:
+  - html-statico
+
+# --- hosting ----------------------------------------------------------------
+hosting: nessuno
+hosting_project: 
+url_prod: 
+url_staging:
+
+# --- distribuzione ----------------------------------------------------------
+distribuzione: nessuna
+distribuzione_url:
+
+# --- dati -------------------------------------------------------------------
+db: nessuno
+db_ref: 
+
+# --- osservabilità ----------------------------------------------------------
+sentry_org: 
+sentry_project: 
+
+# --- scadenze che costano soldi --------------------------------------------
+scadenze: []
+
+# --- contesto ---------------------------------------------------------------
+cliente:
+note:
