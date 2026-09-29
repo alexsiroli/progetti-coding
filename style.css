@@ -42,6 +42,7 @@
   --block-ink: #1E2350;
   --block-white: #FFFDF8;
   --slot: #FFFDF8;
+  --scrim: rgb(20 22 45 / .62);
 
   /* tipografia */
   --font-sign: "Bungee", "Arial Black", sans-serif;
@@ -640,7 +641,7 @@ svg { width: 24px; height: 24px; flex: none; }
   overflow: visible;
 }
 
-.player::backdrop { background: rgb(20 22 45 / .62); }
+.player::backdrop { background: var(--scrim); }
 
 .player-card {
   overflow: hidden;
@@ -682,7 +683,7 @@ svg { width: 24px; height: 24px; flex: none; }
 .player-stage {
   position: relative;
   aspect-ratio: 480 / 420;
-  background: #fff;
+  background: var(--slot);
 }
 
 .player-stage iframe {
@@ -701,13 +702,11 @@ svg { width: 24px; height: 24px; flex: none; }
   justify-items: center;
   gap: 12px;
   margin: 0;
-  color: #4A4F72;
+  color: var(--block-ink);
   font-weight: 700;
-  --flag: #2BA84A;
-  --flag-deep: #1D7A34;
 }
 
-.stage-wait svg { width: 48px; height: 48px; color: #1E2350; }
+.stage-wait svg { width: 48px; height: 48px; }
 
 .player-foot {
   display: flex;
