@@ -20,6 +20,7 @@ const base = "http://localhost:4108/";
       await page.goto(base);
       await page.waitForFunction(() => document.querySelectorAll('[data-count]').length && [...document.querySelectorAll('[data-count]')].every((s) => /\d/.test(s.textContent)));
       await page.evaluate(() => document.fonts.ready);
+      await page.waitForTimeout(500);
       await page.screenshot({ path: `${out}/home-${name}${sfx}.png` });
       if (scheme === "light") await page.screenshot({ path: `${out}/home-${name}-full.png`, fullPage: true });
       await page.goto(base + "#5_saffi_natale");

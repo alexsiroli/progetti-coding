@@ -46,7 +46,7 @@
 
   <dialog class="player" id="player" aria-labelledby="player-who" data-testid="player">
     <div class="player-card">
-      <header class="player-head">
+      <div class="player-head">
         <div>
           <h2 id="player-who"></h2>
           <p id="player-meta"></p>
@@ -54,16 +54,16 @@
         <button type="button" class="icon-btn" data-close aria-label="Chiudi">
           <svg aria-hidden="true"><use href="#i-x" /></svg>
         </button>
-      </header>
+      </div>
       <div class="player-stage" id="player-stage"></div>
-      <footer class="player-foot">
+      <div class="player-foot">
         <a class="btn" id="player-open" href="#" target="_blank" rel="noopener">
           <svg aria-hidden="true"><use href="#i-external" /></svg>Apri su Snap!
         </a>
         <button type="button" class="btn" id="player-copy">
           <svg aria-hidden="true"><use href="#i-link" /></svg><span>Copia il link</span>
         </button>
-      </footer>
+      </div>
     </div>
   </dialog>
 </body>

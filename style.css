@@ -263,18 +263,20 @@ svg { width: 24px; height: 24px; flex: none; }
 }
 
 .awning {
+  --aw-h: 44px;
   position: relative;
   z-index: 1;
-  height: 44px;
+  --aw-band: calc(var(--aw-h) - 14px);
+  height: var(--aw-h);
   margin-bottom: -14px;
   border-radius: var(--r-card) var(--r-card) 0 0;
   background: repeating-linear-gradient(90deg, var(--c-deep) 0 24px, var(--slot) 24px 48px);
   -webkit-mask:
-    linear-gradient(#000 0 0) 0 0 / 100% 30px no-repeat,
-    radial-gradient(circle 12px at 12px 30px, #000 96%, transparent 100%) 0 0 / 24px 100% repeat-x;
+    linear-gradient(#000 0 0) 0 0 / 100% var(--aw-band) no-repeat,
+    radial-gradient(circle 12px at 12px var(--aw-band), #000 96%, transparent 100%) 0 0 / 24px 100% repeat-x;
   mask:
-    linear-gradient(#000 0 0) 0 0 / 100% 30px no-repeat,
-    radial-gradient(circle 12px at 12px 30px, #000 96%, transparent 100%) 0 0 / 24px 100% repeat-x;
+    linear-gradient(#000 0 0) 0 0 / 100% var(--aw-band) no-repeat,
+    radial-gradient(circle 12px at 12px var(--aw-band), #000 96%, transparent 100%) 0 0 / 24px 100% repeat-x;
 }
 
 .pav-body {
@@ -779,7 +781,7 @@ svg { width: 24px; height: 24px; flex: none; }
 
   .pavilions h2 { font-size: 1.25rem; margin-bottom: 20px; }
   .stalls { gap: 20px 12px; }
-  .awning { height: 34px; margin-bottom: -12px; }
+  .awning { --aw-h: 36px; }
   .awning, .pav-body { --r-card: 12px; }
   .pav-body { gap: 4px 16px; padding: 22px 16px 14px; }
   .pav-code { font-size: 3.25rem; }
