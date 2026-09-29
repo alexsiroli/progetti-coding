@@ -1,0 +1,12 @@
+{
+  "name": "progetti-coding",
+  "private": true,
+  "description": "Pagina statica: nessuna build. Le dipendenze servono solo allo smoke test.",
+  "scripts": {
+    "serve": "python -m http.server 4108",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}
