@@ -38,5 +38,23 @@ const base = "http://localhost:4108/";
       await ctx.close();
     }
   }
+  // gesto: stato di aggancio e "in esecuzione" (movimento pieno)
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const page = await ctx.newPage();
+  await page.route("https://snap.berkeley.edu/**", (r) => r.fulfill({ contentType: "text/html", body: "<body></body>" }));
+  await page.goto(base + "#2o_plauto");
+  await page.waitForSelector('[data-testid="project"]');
+  await page.waitForTimeout(900);
+  const from = await page.locator("#hat").boundingBox();
+  const to = await page.getByTestId("project").nth(4).boundingBox();
+  await page.mouse.move(from.x + 30, from.y + 30);
+  await page.mouse.down();
+  await page.mouse.move(to.x + 90, to.y + 30, { steps: 10 });
+  await page.waitForTimeout(100);
+  await page.screenshot({ path: `${out}/gesture-drop.png` });
+  await page.mouse.up();
+  await page.waitForTimeout(330);
+  await page.screenshot({ path: `${out}/gesture-running.png` });
+  await ctx.close();
   await browser.close();
 })();

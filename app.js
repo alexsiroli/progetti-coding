@@ -30,6 +30,11 @@ const initials = (s) => {
 };
 const fullName = (c) => `${c.code} ${c.school}${c.edition ? " " + c.edition : ""}`;
 const plural = (n) => `${n} ${n === 1 ? "progetto" : "progetti"}`;
+// "2O" in Bungee sembra "20": la lettera della sezione va in uno slot a parte
+const codeHtml = (c) => {
+  const m = /^(\d+)([A-Z]+)$/.exec(c.code);
+  return m ? `${m[1]}<span class="pav-sec">${m[2]}</span>` : esc(c.code);
+};
 const icon = (id) => `<svg aria-hidden="true"><use href="#i-${id}"/></svg>`;
 
 // --- dati ---------------------------------------------------------------
@@ -106,7 +111,7 @@ function renderHome(prevId) {
     <section class="hero">
       <div>
         <h1>Progetti <span>Coding</span></h1>
-        <p class="hero-sub">I giochi e le storie che le classi hanno programmato con Snap!, anno scolastico ${YEAR}.</p>
+        <p class="hero-sub">I giochi e le storie programmati con Snap! dalle classi del Prof. Alex Siroli, anno scolastico ${YEAR}.</p>
       </div>
       <ol class="howto stack" aria-label="Come funziona">
         <li class="block hat" data-c="control" style="--i:0">quando si apre la pagina</li>
@@ -123,7 +128,7 @@ function renderHome(prevId) {
             <a class="stall pav" href="#${c.id}" data-c="${c.c}" data-testid="class-${c.id}" style="view-transition-name:pav-${c.id}">
               <span class="awning" aria-hidden="true"></span>
               <span class="pav-body">
-                <span class="pav-code">${esc(c.code)}</span>
+                <span class="pav-code">${codeHtml(c)}</span>
                 <span class="pav-school">${esc(c.school)}</span>
                 <span class="pav-meta">
                   <span class="slot" data-count="${c.id}">progetti</span>
@@ -153,16 +158,17 @@ function renderClass(cls) {
         <a class="back" href="#" data-testid="back">${icon("back")}Tutti i padiglioni</a>
         <span class="brand" aria-hidden="true">Progetti Coding</span>
       </nav>
-      <ul class="switcher" aria-label="Classi">
-        ${CLASSES.map((c) => `<li><a href="#${c.id}" data-c="${c.c}"${c.id === cls.id ? ' aria-current="page"' : ""}>${esc(fullName(c))}</a></li>`).join("")}
-      </ul>
       <header class="class-head pav" data-c="${cls.c}" style="view-transition-name:pav-${cls.id}">
         <span class="awning" aria-hidden="true"></span>
         <div class="pav-body">
-          <h1 id="cls-h" tabindex="-1"><span class="pav-code">${esc(cls.code)}</span> <span class="pav-school">${esc(cls.school)}${cls.edition ? ` <span class="sr-only">edizione</span> ${esc(cls.edition)}` : ""}</span></h1>
+          <h1 id="cls-h" tabindex="-1"><span class="pav-code">${codeHtml(cls)}</span> <span class="pav-school">${esc(cls.school)}${cls.edition ? ` <span class="sr-only">edizione</span> ${esc(cls.edition)}` : ""}</span></h1>
           <p class="pav-meta"><span class="slot" id="cls-count">progetti</span><span>Anno scolastico ${YEAR}</span></p>
         </div>
       </header>
+      <aside class="side" aria-label="Classi e ricerca">
+      <ul class="switcher" aria-label="Classi">
+        ${CLASSES.map((c) => `<li><a href="#${c.id}" data-c="${c.c}"${c.id === cls.id ? ' aria-current="page"' : ""}>${esc(fullName(c))}</a></li>`).join("")}
+      </ul>
       <div class="tools">
         <div class="finder">
           <label for="q">Cerca un nome</label>
@@ -174,12 +180,16 @@ function renderClass(cls) {
         </div>
         <p class="status" id="status" role="status"></p>
       </div>
+      </aside>
       <ol class="script-grid" id="grid" aria-labelledby="cls-h" aria-busy="true" data-testid="projects">
         ${Array.from({ length: 6 }, () => `<li class="skel" aria-hidden="true"><span class="block proj"></span></li>`).join("")}
       </ol>
     </div>`;
 
   wireHat(document.getElementById("hat"));
+  const sw = app.querySelector(".switcher");
+  const here = sw.querySelector("[aria-current]");
+  sw.scrollLeft = here.offsetLeft - sw.offsetLeft - 16; // su telefono la classe attuale resta in vista
   const p = load(cls.id).then((items) => fillGrid(cls, items), () => showError(cls));
   // la transizione aspetta i dati solo per un attimo, poi mostra lo scheletro
   return Promise.race([p, new Promise((r) => setTimeout(r, 700))]);
@@ -202,7 +212,7 @@ function fillGrid(cls, items) {
           <span class="proj-ini" aria-hidden="true">${esc(initials(p.student))}</span>
           <span class="proj-text">
             <span class="proj-who">${esc(p.student)}</span>
-            <span class="proj-name">${esc(p.name || GENERIC_NAME)}</span>
+            ${p.name && p.name !== GENERIC_NAME ? `<span class="proj-name">${esc(p.name)}</span>` : ""}
           </span>
           <span class="proj-go">${icon("flag")}Avvia</span>
         </a>

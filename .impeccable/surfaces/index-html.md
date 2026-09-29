@@ -19,7 +19,7 @@ OWN-WORLD: carta calda a quadretti blu da quaderno; campi pieni nei colori delle
 
 STORY: il visitatore capisce subito che qui ci sono i giochi della sua classe, sceglie il padiglione, trova il suo nome e preme la bandiera verde. Il genitore copia il link e lo manda.
 
-FIRST VIEWPORT: a sinistra "PROGETTI CODING" in Bungee a scala d'insegna con una riga su anno e docente; a destra uno script Snap! di quattro blocchi che spiega come si usa la pagina; sotto, sei padiglioni in griglia 3x2 (2 colonne su telefono), gia' visibili senza scorrere su desktop.
+FIRST VIEWPORT: a sinistra "PROGETTI CODING" in Bungee a scala d'insegna con una riga su anno e docente; a destra uno script Snap! di quattro blocchi che spiega come si usa la pagina; sotto, sei padiglioni in griglia 3x2, gia' visibili senza scorrere su desktop; su telefono (sotto 560 px) una colonna di padiglioni bassi, perche' a due colonne ogni padiglione superava i 260 px e i nomi andavano a capo.
 
 FORM: fusione del brief fissato con il candidato 3 della lista (quaderno a quadretti), seed b0c1a8ec. Rilanci dai challenger scartati: insegna unica per piano (insegne di Tokyo: il codice della classe e' la sola voce forte del padiglione), stato come illuminazione (lo script "in esecuzione" si accende come in Snap!), tutto misurato sul quadretto (oscilloscopio: spaziature multiple di 8 px, quadretto 24 px).
 
