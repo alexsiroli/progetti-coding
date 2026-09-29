@@ -3,339 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progetti Coding</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
-
-    :root {
-      --primary-color: #FF6B6B;
-      --secondary-color: #4ECDC4;
-      --accent-color: #FFE66D;
-      --text-color: #2C3E50;
-      --bg-color: #F7F9FC;
-      --card-bg: #FFFFFF;
-    }
-
-    body {
-      font-family: 'Fredoka', sans-serif;
-      background-color: var(--bg-color);
-      background-image: radial-gradient(var(--secondary-color) 2px, transparent 2px);
-      background-size: 30px 30px;
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--primary-color);
-      width: 100%;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      text-align: center;
-      margin-bottom: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -10%;
-      width: 50%;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.1);
-      transform: rotate(30deg);
-    }
-
-    h1 {
-      color: white;
-      font-size: 3rem;
-      margin: 0;
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
-      letter-spacing: 1px;
-    }
-
-    header h2 {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.5rem;
-      margin-top: 0.5rem;
-      font-weight: 400;
-    }
-
-    .container {
-      max-width: 1200px;
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding-bottom: 3rem;
-    }
-
-    .class-selector {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .class-btn {
-      background-color: var(--card-bg);
-      border: 3px solid var(--secondary-color);
-      color: var(--text-color);
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .class-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(78, 205, 196, 0.3);
-      background-color: var(--secondary-color);
-      color: white;
-    }
-
-    .class-btn.active {
-      background-color: var(--secondary-color);
-      color: white;
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
-      transform: translateY(1px);
-    }
-
-    .projects-area {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .project-card {
-      background-color: var(--card-bg);
-      border-radius: 20px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 5px solid var(--accent-color);
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px) rotate(1deg);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .student-name {
-      font-size: 1.4rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .project-link {
-      display: inline-block;
-      margin-top: auto;
-      text-decoration: none;
-      background-color: var(--accent-color);
-      color: var(--text-color);
-      padding: 0.8rem 1.2rem;
-      border-radius: 15px;
-      font-weight: 600;
-      transition: background-color 0.2s;
-    }
-
-    .project-link:hover {
-      background-color: #ffd633;
-    }
-
-    .project-title {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #666;
-    }
-
-    .empty-state {
-      grid-column: 1 / -1;
-      text-align: center;
-      font-size: 1.5rem;
-      color: #888;
-      padding: 3rem;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 20px;
-      border: 2px dashed #ccc;
-    }
-
-    .iframe-container {
-      width: 100%;
-      aspect-ratio: 580 / 560;
-      background: #f0f0f0;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 1rem;
-      border: 2px solid var(--secondary-color);
-    }
-
-    .iframe-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Decorations */
-    .decoration {
-      position: fixed;
-      z-index: -1;
-      opacity: 0.5;
-    }
-
-    .dec-1 {
-      top: 10%;
-      left: 5%;
-      width: 100px;
-      height: 100px;
-      background: #FFD93D;
-      border-radius: 50%;
-    }
-
-    .dec-2 {
-      bottom: 10%;
-      right: 5%;
-      width: 150px;
-      height: 150px;
-      background: #6BCB77;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
-    .dec-3 {
-      bottom: 20%;
-      left: 10%;
-      width: 80px;
-      height: 80px;
-      background: #4D96FF;
-      transform: rotate(45deg);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progetti Coding 2025/2026</title>
+  <meta name="description" content="I progetti Snap! delle classi del Prof. Alex Siroli, anno scolastico 2025/2026.">
+  <meta property="og:title" content="Progetti Coding 2025/2026">
+  <meta property="og:description" content="I progetti Snap! delle classi del Prof. Alex Siroli.">
+  <meta name="theme-color" content="#F4EAD5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1D1F27" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 21V4' stroke='%231E2350' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M6 4.5c2.5-1.6 5-1.6 7.5 0s5 1.6 7.5 0v9c-2.5 1.6-5 1.6-7.5 0s-5-1.6-7.5 0z' fill='%232BA84A' stroke='%231D7A34' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/bungee-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/atkinson-next-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- bandiera verde di Snap! -->
+    <symbol id="i-flag" viewBox="0 0 24 24">
+      <path d="M6 21V4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      <path d="M6 4.5c2.5-1.6 5-1.6 7.5 0s5 1.6 7.5 0v9c-2.5 1.6-5 1.6-7.5 0s-5-1.6-7.5 0z" style="fill:var(--flag);stroke:var(--flag-deep)" stroke-width="1.5" stroke-linejoin="round" />
+    </symbol>
+    <!-- icone Tabler (MIT) -->
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5l10 -10" /></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></symbol>
+  </svg>
 
-  <div class="decoration dec-1"></div>
-  <div class="decoration dec-2"></div>
-  <div class="decoration dec-3"></div>
+  <main id="app" data-testid="app">
+    <noscript>
+      <p class="notice">Per vedere i progetti serve JavaScript.</p>
+    </noscript>
+  </main>
 
-  <header>
-    <h1>Progetti Coding 2025/2026</h1>
-    <h2>Prof. Alex Siroli</h2>
-  </header>
+  <footer class="site-foot">
+    <p>Progetti realizzati con <a href="https://snap.berkeley.edu/" target="_blank" rel="noopener">Snap!</a> dell'Università di Berkeley.</p>
+    <p>Prof. Alex Siroli</p>
+  </footer>
 
-  <div class="container">
-    <div class="class-selector" id="classSelector">
-      <!-- Buttons will be generated by JS -->
+  <dialog class="player" id="player" aria-labelledby="player-who" data-testid="player">
+    <div class="player-card">
+      <header class="player-head">
+        <div>
+          <h2 id="player-who"></h2>
+          <p id="player-meta"></p>
+        </div>
+        <button type="button" class="icon-btn" data-close aria-label="Chiudi">
+          <svg aria-hidden="true"><use href="#i-x" /></svg>
+        </button>
+      </header>
+      <div class="player-stage" id="player-stage"></div>
+      <footer class="player-foot">
+        <a class="btn" id="player-open" href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-external" /></svg>Apri su Snap!
+        </a>
+        <button type="button" class="btn" id="player-copy">
+          <svg aria-hidden="true"><use href="#i-link" /></svg><span>Copia il link</span>
+        </button>
+      </footer>
     </div>
-
-    <div class="projects-area" id="projectsArea">
-      <div class="empty-state">Seleziona una classe per vedere i progetti!</div>
-    </div>
-  </div>
-
-  <script>
-    const classes = [
-      { name: "2A Anna Frank", id: "2a_anna_frank" },
-      { name: "2A Ronta", id: "2a_ronta" },
-      { name: "2O Plauto", id: "2o_plauto" },
-      { name: "5 Saffi Natale", id: "5_saffi_natale" },
-      { name: "5 Saffi Primavera", id: "5_saffi_primavera" },
-      { name: "5 Saffi Estate", id: "5_saffi_estate" }
-    ];
-
-    const classSelector = document.getElementById('classSelector');
-    const projectsArea = document.getElementById('projectsArea');
-
-    // Initialize buttons
-    classes.forEach(cls => {
-      const btn = document.createElement('button');
-      btn.className = 'class-btn';
-      btn.textContent = cls.name;
-      btn.onclick = () => loadProjects(cls.id, btn);
-      classSelector.appendChild(btn);
-    });
-
-    async function loadProjects(classId, clickedBtn) {
-      // Update UI for active button
-      document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
-      clickedBtn.classList.add('active');
-
-      // Show loading
-      projectsArea.innerHTML = '<div class="empty-state">Caricamento...</div>';
-
-      try {
-        const response = await fetch(`data/${classId}.json`);
-        if (!response.ok) throw new Error('File not found');
-        const data = await response.json();
-        renderProjects(data);
-      } catch (error) {
-        console.error(error);
-        projectsArea.innerHTML = '<div class="empty-state">Nessun progetto trovato o errore di caricamento (assicurati di usare un server web).</div>';
-      }
-    }
-
-    function renderProjects(data) {
-      projectsArea.innerHTML = '';
-
-      if (!data || data.length === 0) {
-        projectsArea.innerHTML = '<div class="empty-state">Ancora nessun progetto inserito per questa classe!</div>';
-        return;
-      }
-
-      data.forEach(entry => {
-        // If entry has a list of projects under one student/group name
-        if (entry.projects && Array.isArray(entry.projects)) {
-          entry.projects.forEach(proj => {
-            const card = createProjectCard(entry.student, proj.name, proj.url);
-            projectsArea.appendChild(card);
-          });
-        } else if (entry.name && entry.url) {
-          // Direct project entry or flat structure
-          const card = createProjectCard(entry.student || "Studente", entry.name, entry.url);
-          projectsArea.appendChild(card);
-        }
-      });
-    }
-
-    function createProjectCard(studentName, projectName, projectUrl) {
-      const div = document.createElement('div');
-      div.className = 'project-card';
-      div.innerHTML = `
-                <div class="student-name">${studentName}</div>
-                <div class="project-title">${projectName}</div>
-                <div class="iframe-container">
-                    <iframe 
-                        src="${projectUrl}" 
-                        allow="clipboard-read; clipboard-write; fullscreen" 
-                        title="${projectName}">
-                    </iframe>
-                </div>
-                <a href="${projectUrl}" target="_blank" class="project-link">Apri a tutto schermo 🚀</a>
-            `;
-      return div;
-    }
-  </script>
+  </dialog>
 </body>
 
 </html>
