@@ -1,0 +1,7 @@
+
+
+# Segreti locali (Alx Studio)
+.env
+.env.*
+!.env.example
+**/.env
