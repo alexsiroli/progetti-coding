@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T03:20:31+00:00",
+  "title": "Design System: Progetti Coding",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Carta a quadretti"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Inchiostro blu penna"
+      },
+      "snap-control": {
+        "role": "primary",
+        "displayName": "Controllo",
+        "onColor": "ink"
+      },
+      "snap-motion": {
+        "role": "primary",
+        "displayName": "Movimento",
+        "onColor": "slot"
+      },
+      "snap-looks": {
+        "role": "primary",
+        "displayName": "Aspetto",
+        "onColor": "slot"
+      },
+      "snap-operators": {
+        "role": "primary",
+        "displayName": "Operatori",
+        "onColor": "ink"
+      },
+      "snap-variables": {
+        "role": "primary",
+        "displayName": "Variabili",
+        "onColor": "ink"
+      },
+      "snap-pen": {
+        "role": "primary",
+        "displayName": "Penna",
+        "onColor": "ink"
+      },
+      "flag": {
+        "role": "accent",
+        "displayName": "Bandiera verde"
+      },
+      "glow": {
+        "role": "accent",
+        "displayName": "In esecuzione"
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Cartoncino scuro"
+      }
+    },
+    "typographyMeta": {
+      "sign": {
+        "displayName": "Insegna",
+        "purpose": "Titolo home e codici classe (Bungee)."
+      },
+      "body": {
+        "displayName": "Testo",
+        "purpose": "Tutto il resto (Atkinson Hyperlegible Next)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pavilion",
+        "value": "drop-shadow(0 10px 14px rgb(30 35 80 / .16))",
+        "purpose": "Padiglioni a riposo."
+      },
+      {
+        "name": "pavilion-hover",
+        "value": "drop-shadow(0 16px 18px rgb(30 35 80 / .22))",
+        "purpose": "Padiglione sollevato."
+      },
+      {
+        "name": "script",
+        "value": "drop-shadow(0 8px 10px rgb(30 35 80 / .14))",
+        "purpose": "Colonne di blocchi."
+      },
+      {
+        "name": "dialog",
+        "value": "0 30px 60px -20px rgb(0 0 0 / .5)",
+        "purpose": "Dialog progetto."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Ingressi, aggancio, dialog."
+      },
+      {
+        "name": "t-fast",
+        "value": "150ms",
+        "purpose": "Pressione e hover."
+      },
+      {
+        "name": "t-base",
+        "value": "220ms",
+        "purpose": "Dialog, ritorno e aggancio del cappello, dissolvenze ridotte."
+      },
+      {
+        "name": "t-slow",
+        "value": "320ms",
+        "purpose": "Ingresso dei blocchi, transizione di vista."
+      },
+      {
+        "name": "stagger",
+        "value": "40ms",
+        "purpose": "Sfasamento tra blocchi, massimo 10."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "560px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "tablet",
+        "value": "1080px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Blocco progetto",
+      "kind": "custom",
+      "refersTo": "project-block",
+      "description": "Blocco comando Snap! con incavo e linguetta; e' il link al progetto.",
+      "html": "<a class=\"ds-block\" href=\"#\"><span class=\"ds-ini\">AA</span><span class=\"ds-who\">Aiman e Anita</span><span class=\"ds-go\">Avvia</span></a>",
+      "css": ".ds-block{position:relative;isolation:isolate;display:flex;align-items:center;gap:14px;padding:21px 14px;color:#FFFDF8;font:800 1.1875rem/1.2 'Atkinson Hyperlegible Next',system-ui,sans-serif;text-decoration:none;transition:transform 150ms cubic-bezier(.23,1,.32,1)}.ds-block::before{content:'';position:absolute;inset:0 0 7px 0;z-index:-1;background:#4A6CD4;border-radius:8px;clip-path:polygon(0 0,20px 0,27px 7px,45px 7px,52px 0,100% 0,100% 100%,0 100%)}.ds-block::after{content:'';position:absolute;z-index:-1;left:20px;bottom:0;width:32px;height:8px;background:#4A6CD4;clip-path:polygon(0 0,100% 0,25px 100%,7px 100%)}.ds-block:hover{transform:translateY(-3px)}.ds-block:active{transform:scale(.98)}.ds-block:focus-visible{outline:3px solid #1E2350;outline-offset:3px}.ds-ini{display:grid;place-items:center;width:46px;height:46px;border-radius:999px;background:#FFFDF8;color:#1E2350;font:400 .875rem Bungee,sans-serif}.ds-who{flex:1}.ds-go{padding:6px 12px;border-radius:999px;background:#FFFDF8;color:#1E2350;font-size:.9375rem}"
+    },
+    {
+      "name": "Padiglione",
+      "kind": "card",
+      "refersTo": "project-block",
+      "description": "Classe come padiglione: tenda smerlata e insegna piena; la sezione sta in un tassello bianco.",
+      "html": "<a class=\"ds-pav\" href=\"#\"><span class=\"ds-aw\"></span><span class=\"ds-body\"><b>2<i>A</i></b>Anna Frank</span></a>",
+      "css": ".ds-pav{display:flex;flex-direction:column;width:320px;text-decoration:none;color:#FFFDF8;filter:drop-shadow(0 10px 14px rgb(30 35 80/.16));transition:transform 220ms cubic-bezier(.23,1,.32,1)}.ds-pav:hover{transform:translateY(-4px)}.ds-pav:focus-visible{outline:3px solid #1E2350;outline-offset:3px}.ds-aw{height:44px;margin-bottom:-14px;position:relative;z-index:1;border-radius:16px 16px 0 0;background:repeating-linear-gradient(90deg,#3852A1 0 24px,#FFFDF8 24px 48px);-webkit-mask:linear-gradient(#000 0 0) 0 0/100% 30px no-repeat,radial-gradient(circle 12px at 12px 30px,#000 96%,transparent) 0 0/24px 100% repeat-x;mask:linear-gradient(#000 0 0) 0 0/100% 30px no-repeat,radial-gradient(circle 12px at 12px 30px,#000 96%,transparent) 0 0/24px 100% repeat-x}.ds-body{display:flex;align-items:end;gap:20px;padding:30px 20px 20px;border-radius:0 0 16px 16px;background:#4A6CD4;font:800 1.375rem 'Atkinson Hyperlegible Next',system-ui,sans-serif}.ds-body b{font:400 4rem/.8 Bungee,sans-serif}.ds-body i{font:800 .6em/1 'Atkinson Hyperlegible Next',system-ui,sans-serif;font-style:normal;background:#FFFDF8;color:#1E2350;padding:.1em .16em;border-radius:.16em;margin-left:.1em;vertical-align:.14em}"
+    },
+    {
+      "name": "Slot",
+      "kind": "chip",
+      "refersTo": "slot",
+      "description": "Input bianco a pillola di Snap!: conteggi, edizioni, parole nei blocchi.",
+      "html": "<span class=\"ds-slot\">11 progetti</span>",
+      "css": ".ds-slot{display:inline-flex;padding:2px 12px;border-radius:999px;background:#FFFDF8;color:#1E2350;font:700 .9375rem/1.4 'Atkinson Hyperlegible Next',system-ui,sans-serif}"
+    },
+    {
+      "name": "Pulsante",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Pulsanti e link secondari (indietro, Apri su Snap!, Copia il link).",
+      "html": "<button class=\"ds-btn\">Copia il link</button>",
+      "css": ".ds-btn{min-height:48px;padding:0 20px;border:0;border-radius:999px;background:#FBF6EA;color:#1E2350;box-shadow:inset 0 0 0 2px rgb(30 35 80/.16);font:700 1rem 'Atkinson Hyperlegible Next',system-ui,sans-serif;cursor:pointer;transition:transform 150ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{box-shadow:inset 0 0 0 2px #1E2350}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:3px solid #1E2350;outline-offset:3px}"
+    },
+    {
+      "name": "Ricerca",
+      "kind": "input",
+      "refersTo": "search-slot",
+      "description": "Campo di ricerca per nome, etichetta sopra.",
+      "html": "<label class=\"ds-lab\">Cerca un nome<input class=\"ds-in\" type=\"search\" placeholder=\"per esempio Anita\"></label>",
+      "css": ".ds-lab{display:grid;gap:8px;font:800 1.0625rem 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:#1E2350}.ds-in{height:52px;padding:0 18px;border:0;border-radius:999px;background:#FBF6EA;box-shadow:inset 0 0 0 2px rgb(30 35 80/.16);font:600 1.0625rem 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:#1E2350;outline:none}.ds-in:focus{box-shadow:inset 0 0 0 3px #1E2350}.ds-in::placeholder{color:#4A4F72}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Luna park a blocchi Snap!",
+    "overview": "La bacheca di fine corso come luna park: classi come padiglioni a strisce, progetti come blocchi Snap! che si incastrano, su carta a quadretti. Colore in campi pieni, testo grande e leggibile, un iframe alla volta.",
+    "keyCharacteristics": [
+      "Categorie Snap! come campi pieni",
+      "Carta a quadretti 24 px",
+      "Bungee per le insegne, Atkinson per il testo",
+      "Blocco cappello da agganciare per avviare"
+    ],
+    "rules": [
+      {
+        "name": "Un campo, un colore",
+        "body": "Ogni padiglione o blocco ha un solo colore di categoria e il suo testo AA.",
+        "section": "colors"
+      },
+      {
+        "name": "Colori in fila",
+        "body": "I blocchi di una classe ciclano i sei colori a partire da quello della classe.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Colore in campi pieni",
+      "Misure sul quadretto",
+      "Un iframe alla volta, su richiesta",
+      "Un link per ogni progetto"
+    ],
+    "donts": [
+      "Suono, sensori e liste come fondo di testo",
+      "Puntini e decorazioni sparse",
+      "Rimbalzi e animazioni sulle azioni ripetute",
+      "Finte anteprime dei progetti"
+    ]
+  }
+}
