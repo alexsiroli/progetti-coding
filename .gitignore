@@ -9,3 +9,8 @@ playwright-report/
 .env.*
 !.env.example
 **/.env
+
+# Test (Playwright)
+node_modules/
+test-results/
+playwright-report/
