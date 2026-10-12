@@ -50,6 +50,13 @@ function load(id) {
   return cache.get(id);
 }
 
+// Snap! attiva titolo, autore e modifica con qualunque valore (anche false): vanno tolti dall'url
+function embedUrl(url) {
+  const u = new URL(url);
+  for (const k of ["showTitle", "showAuthor", "editButton"]) u.searchParams.delete(k);
+  return u.href;
+}
+
 // stessa lettura dei JSON di prima: { student, projects: [...] } oppure voce piatta { name, url }
 function flatten(data) {
   const seen = new Map();
@@ -61,7 +68,7 @@ function flatten(data) {
       const base = slugify(student);
       const n = (seen.get(base) || 0) + 1;
       seen.set(base, n);
-      out.push({ student, name: p.name, url: p.url, slug: n > 1 ? `${base}-${n}` : base });
+      out.push({ student, name: p.name, url: embedUrl(p.url), slug: n > 1 ? `${base}-${n}` : base });
     }
   }
   return out;
