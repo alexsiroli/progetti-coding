@@ -26,6 +26,8 @@ test("home, classe e apertura di un progetto", async ({ page }) => {
   await expect(player).toBeVisible();
   await expect(page).toHaveURL(/#2a_ronta\/aiman-e-anita$/);
   await expect(player.locator("iframe")).toHaveAttribute("src", /snap\.berkeley\.edu\/embed\?projectname=Aiman/);
+  // privacy minori: in Snap!, qualunque valore di questi parametri li attiva, quindi vanno tolti
+  await expect(player.locator("iframe")).not.toHaveAttribute("src", /showTitle|showAuthor|editButton/);
   await expect(player.getByRole("heading")).toHaveText("Aiman e Anita");
 
   await page.keyboard.press("Escape");
